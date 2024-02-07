@@ -12,10 +12,10 @@
 }
 
 :root {
-    --bg-color: #1f242d;
-    --second-bg-color: #323946;
-    --text-color: #fff;
-    --main-color: #0ef;
+    --bg-color: #fff;
+    --second-bg-color: #EFF2F5;
+    --text-color: #000;
+    --main-color: #009EF7;
 }
 
 html {
@@ -23,9 +23,22 @@ html {
     overflow-x: hidden;
 }
 
+[data-theme="dark"] {
+    --bg-color: #1f242d;
+    --second-bg-color: #323946;
+    --text-color: #fff;
+    --main-color: #009EF7;
+}
+
 body {
     background: var(--bg-color);
     color: var(--text-color);
+}
+
+#theme-config {
+    font-size: 1.7rem;
+    cursor: pointer;
+    transition: 1s ease;
 }
 
 section {

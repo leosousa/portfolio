@@ -7,6 +7,19 @@ menuIcon.onclick = () => {
     navbar.classList.toggle('active');
 }
 
+/*==================== toggle light/dark theme ====================*/
+let themeConfig = document.querySelector('#theme-config');
+
+console.log('themeConfig', themeConfig);
+
+themeConfig.onclick = () => {
+    if (themeConfig.classList.toggle('bxs-moon')) {
+        document.documentElement.setAttribute('data-theme', 'dark')
+    }
+    else {
+        document.documentElement.setAttribute('data-theme', 'light')
+    }
+}
 
 /*==================== scroll sections active link ====================*/
 let sections = document.querySelectorAll('section');
