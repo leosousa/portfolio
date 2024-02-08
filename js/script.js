@@ -82,9 +82,7 @@ function sendEmail() {
     const bodyMessage =`Full Name: ${fullname.value}<br>Email: ${email.value}<br>Phone: ${phone.value}<br>Message: ${message.value}`;
 
     Email.send({
-        Host : "smtp.elasticemail.com",
-        Username : "leonardofsousa@outlook.com",
-        Password : "B79F1778947BF57C649BA70364E0840DD357",
+        SecureToken : "724d1cda-e1c1-4cb1-9c67-69e1020e6a10",
         To : 'leonardofsousa@outlook.com',
         From : "leonardofsousa@outlook.com",
         Subject : subject.value,
@@ -172,5 +170,8 @@ form.addEventListener("submit", (e) => {
         !subject.classList.contains("error") &&
         !message.classList.contains("error")) {
             sendEmail();
+
+            form.reset();
+            return false;
         }
 });
