@@ -27,7 +27,7 @@
       <a href="#services">Serviços</a>
       <a href="#projects">Projetos</a>
       <a href="#contact">Contato</a>
-      <a href="#"><i class="bx bx-sun" id="theme-config"></i></a>
+      <i class="bx bx-sun" id="theme-config"></i>
     </nav>
     
   </header>
@@ -175,14 +175,30 @@
 
     <form action="#">
       <div class="input-box">
-        <input type="text" placeholder="Full name">
-        <input type="email" placeholder="Email address">
+        <div class="input-field field">
+          <input type="text" placeholder="Full name" id="fullname" class="item">
+          <div class="error-msg">Full name can't blank</div>
+        </div>
+        <div class="input-field field">
+          <input type="email" placeholder="Email address" id="email" class="item">
+          <div class="error-msg email">Email address can't blank</div>
+        </div>
       </div>
       <div class="input-box">
-        <input type="number" placeholder="Mobile number">
-        <input type="text" placeholder="Email subject">
+        <div class="input-field field">
+          <input type="number" placeholder="Phone number" id="phone" class="item">
+          <div class="error-msg">Phone number can't blank</div>
+        </div>
+        <div class="input-field field">
+          <input type="text" placeholder="Email subject" id="subject" class="item">
+          <div class="error-msg">Subject can't blank</div>
+        </div>
       </div>
-      <textarea name="" id="" cols="30" rows="10" placeholder="Your message"></textarea>
+      <div class="textarea-field field">
+        <textarea name="" id="message" cols="30" rows="10" placeholder="Your message" class="item"></textarea>
+        <div class="error-msg">Message can't blank</div>
+      </div>
+      
       <input type="submit" value="Send Message" class="btn">
     </form>
   </section>
@@ -204,6 +220,12 @@
 
   <!-- typed js -->
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+  <!-- smtp js -->
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+    <!-- sweet alert js -->
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
   <!-- custom js -->
   <script src="js/script.js"></script>
