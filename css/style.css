@@ -487,7 +487,8 @@ form .textarea-field .error-msg {
         display: block;
     }
 
-    .navbar a {
+    .navbar a,
+    .navbar i {
         display: block;
         font-size: 2rem;
         margin: 3rem 0;

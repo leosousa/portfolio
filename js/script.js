@@ -11,7 +11,7 @@ menuIcon.onclick = () => {
 let themeConfig = document.querySelector('#theme-config');
 
 themeConfig.onclick = () => {
-    if (themeConfig.classList.toggle('bxs-moon')) {
+    if (themeConfig.classList.toggle('bxs-sun')) {
         document.documentElement.setAttribute('data-theme', 'dark')
     }
     else {
@@ -64,11 +64,12 @@ ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' });
 
 /*==================== typed js ====================*/
 const typed = new Typed('.multiple-text', {
-    strings: ['Backend Developer', 'C# Developer', 'Bubble Developer'],
+    strings: ['Desenvolvedor .Net/C#', 'Consultoria em TI'],
     typeSpeed: 200,
     backDelay: 100,
     loop: true
 });
+
 
 /*==================== smtp js ====================*/
 let form = document.querySelector('form');
