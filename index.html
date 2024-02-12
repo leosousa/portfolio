@@ -1,239 +1,60 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html>
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+}
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Leonardo Sousa | Portfolio</title>
+.bgimg {
+  background-image: url('https://www.w3schools.com/w3images/forestbridge.jpg');
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 25px;
+}
 
-  <!-- box icons -->
-  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+.topleft {
+  position: absolute;
+  top: 0;
+  left: 16px;
+}
 
-  <!-- custom css -->
-  <link rel="stylesheet" href="css/style.css" />
-</head>
+.bottomleft {
+  position: absolute;
+  bottom: 0;
+  left: 16px;
+}
 
+.middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+hr {
+  margin: auto;
+  width: 40%;
+}
+</style>
 <body>
-  <!-- header design -->
-  <header class="header">
-    <a href="#" class="logo">Leonardo Sousa</a>
 
-    <i class="bx bx-menu" id="menu-icon"></i>
+<div class="bgimg">
+  <div class="topleft">
+  </div>
+  <div class="middle">
+    <h1>Em breve</h1>
+    <hr>
+    <p>Portfólio em construção</p>
+  </div>
+  <div class="bottomleft">
+  </div>
+</div>
 
-    <nav class="navbar">
-      <a href="#home" class="active">Home</a>
-      <a href="#about">Sobre</a>
-      <a href="#services">Serviços</a>
-      <a href="#projects">Projetos</a>
-      <a href="#contact">Contato</a>
-      <i class="bx bxs-moon" id="theme-config"></i>
-    </nav>
-
-  </header>
-
-  <!-- home section design -->
-  <section class="home" id="home">
-    <div class="home-content">
-      <h3>Olá, Eu sou</h3>
-      <h1>Leonardo Sousa</h1>
-      <h3><span class="multiple-text"></span></h3>
-      <p>Bem-vindo(a)! Sou desenvolvedor de soluções desde 2010, com experiência em diversos tipos de projetos. Aqui
-        você verá estudos e cases para demonstrar como posso contribuir para o sucesso do seu negócio, oferecendo ideias
-        e soluções inovadoras.
-      </p>
-      <div class="social-media">
-        <a href="https://www.instagram.com/_leonardo.sousa/" target="_blank"><i class="bx bxl-instagram-alt"></i></a>
-        <a href="https://www.linkedin.com/in/leonardo-sousa/" target="_blank"><i class="bx bxl-linkedin"></i></a>
-        <a href="https://github.com/leosousa" target="_blank"><i class="bx bxl-github"></i></a>
-      </div>
-      <a href="#" class="btn">Download CV</a>
-    </div>
-
-    <div class="home-img">
-      <img src="images/home.png" alt="Home image">
-    </div>
-  </section>
-
-  <!-- about section design -->
-  <section class="about" id="about">
-    <div class="about-img">
-      <img src="images/about.png" alt="About image">
-    </div>
-
-    <div class="about-content">
-      <h2 class="heading">Sobre <span>Mim</span></h2>
-      <!-- <h3>Backend Developer</h3> -->
-      <p>Tudo começou em 2005, quando eu iniciei no Ensino Médio. Eu resolvi fazer um Curso Técnico em Informática para
-        desenvolver uma profissão enquanto fazia o colegial.</p>
-      <p>Após concluir o curso, entrei em uma faculdade de Análise de Sistemas, que abriu portas a um estágio onde eu
-        fui apresentado ao mundo do Asp.Net e do C#, onde, de fato, aprendi a gostar da profissão.</p>
-      <p>Após um ano desse estágio, saí e fui apresentado por indicação de um profesor ao meu primeiro trabalho oficial.
-        Nessa empresa eu fiquei durante 10 anos, onde passei por diversos projetos, inclusive alguns em linguagens como
-        Vb.Net, PHP e Python. Nessa mesma empresa consegui minhas primeiras certificações Microsoft também.</p>
-      <p>Posteriormente, novas oportunidades apareceram e aprendizados também, diversificando minha stack de
-        atuação e aprendendo não só skills técnicas, mas também a parte de visão de negócios, comunicação e mesmo
-        vendas.</p>
-      <p>Busco incessantemente novos desafios para crescer diariamente, ajudar novos desenvolvedores, contribuir para
-        negócios e impulsionar a transformação digital.</p>
-    </div>
-  </section>
-
-  <!-- services section design -->
-  <section class="services" id="services">
-    <h2 class="heading">Meus <span>serviços</span></h2>
-
-    <div class="services-container">
-      <div class="services-box">
-        <i class="bx bx-code-alt"></i>
-        <h3>Soluções de backend</h3>
-        <p>Criação e manutenção de APIs, utilizando boas práticas do mercado, trazendo performance e segurança para os
-          seus dados.</p>
-      </div>
-
-      <div class="services-box">
-        <i class="bx bx-git-compare"></i>
-        <h3>Integração de sistemas</h3>
-        <p>Criação de soluções que permitem busca e envio de dados dados entre sistemas, a fim de que atenda a
-          necessidade do seu negócio.</p>
-      </div>
-
-      <div class="services-box">
-        <i class="bx bx-user-pin"></i>
-        <h3>Consultoria</h3>
-        <p>Análise, diagnóstico, levantamento e aplicação  de soluções visando o desenvolvimento e a melhoria
-          contínua do seu negócio.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- portfolio section design -->
-  <section class="projects" id="projects">
-    <h2 class="heading">Latest <span>Projects</span></h2>
-
-    <div class="projects-container">
-      <div class="projects-box">
-        <img src="images/portfolio1.jpg" alt="Project image">
-        <div class="projects-layer">
-          <h4>Backend project 1</h4>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa officiis ea nobis consectetur eveniet!
-            Suscipit.</p>
-          <a href="#"><i class="bx bx-link-external"></i></a>
-        </div>
-      </div>
-
-      <div class="projects-box">
-        <img src="images/portfolio2.jpg" alt="Project image">
-        <div class="projects-layer">
-          <h4>Backend project 1</h4>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa officiis ea nobis consectetur eveniet!
-            Suscipit.</p>
-          <a href="#"><i class="bx bx-link-external"></i></a>
-        </div>
-      </div>
-
-      <div class="projects-box">
-        <img src="images/portfolio3.jpg" alt="Project image">
-        <div class="projects-layer">
-          <h4>Backend project 1</h4>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa officiis ea nobis consectetur eveniet!
-            Suscipit.</p>
-          <a href="#"><i class="bx bx-link-external"></i></a>
-        </div>
-      </div>
-
-      <div class="projects-box">
-        <img src="images/portfolio4.jpg" alt="Project image">
-        <div class="projects-layer">
-          <h4>Backend project 1</h4>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa officiis ea nobis consectetur eveniet!
-            Suscipit.</p>
-          <a href="#"><i class="bx bx-link-external"></i></a>
-        </div>
-      </div>
-
-      <div class="projects-box">
-        <img src="images/portfolio5.jpg" alt="Project image">
-        <div class="projects-layer">
-          <h4>Backend project 1</h4>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa officiis ea nobis consectetur eveniet!
-            Suscipit.</p>
-          <a href="#"><i class="bx bx-link-external"></i></a>
-        </div>
-      </div>
-
-      <div class="projects-box">
-        <img src="images/portfolio6.jpg" alt="Project image">
-        <div class="projects-layer">
-          <h4>Backend project 1</h4>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa officiis ea nobis consectetur eveniet!
-            Suscipit.</p>
-          <a href="#"><i class="bx bx-link-external"></i></a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- contact section design -->
-  <section class="contact" id="contact">
-    <h2 class="heading">Contact <span>Me</span></h2>
-
-    <form action="#">
-      <div class="input-box">
-        <div class="input-field field">
-          <input type="text" placeholder="Full name" id="fullname" class="item">
-          <div class="error-msg">Full name can't blank</div>
-        </div>
-        <div class="input-field field">
-          <input type="email" placeholder="Email address" id="email" class="item">
-          <div class="error-msg email">Email address can't blank</div>
-        </div>
-      </div>
-      <div class="input-box">
-        <div class="input-field field">
-          <input type="number" placeholder="Phone number" id="phone" class="item">
-          <div class="error-msg">Phone number can't blank</div>
-        </div>
-        <div class="input-field field">
-          <input type="text" placeholder="Email subject" id="subject" class="item">
-          <div class="error-msg">Subject can't blank</div>
-        </div>
-      </div>
-      <div class="textarea-field field">
-        <textarea name="" id="message" cols="30" rows="10" placeholder="Your message" class="item"></textarea>
-        <div class="error-msg">Message can't blank</div>
-      </div>
-
-      <input type="submit" value="Send Message" class="btn">
-    </form>
-  </section>
-
-  <!-- footer design -->
-  <footer class="footer">
-    <div class="footer-text">
-      <p>Copyright &copy; 2024</p>
-    </div>
-
-    <div class="footer-iconTop">
-      <a href="#home"><i class="bx bx-up-arrow-alt"></i></a>
-    </div>
-  </footer>
-
-
-  <!-- scroll reveal -->
-  <script src="https://unpkg.com/scrollreveal"></script>
-
-  <!-- typed js -->
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-
-  <!-- smtp js -->
-  <script src="https://smtpjs.com/v3/smtp.js"></script>
-
-  <!-- sweet alert js -->
-  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-
-  <!-- custom js -->
-  <script src="js/script.js"></script>
 </body>
-
 </html>
