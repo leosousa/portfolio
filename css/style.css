@@ -361,7 +361,8 @@ span {
     resize: none;
 }
 
-.field .item {
+.field .item,
+.field .item-phone {
     width: 100%;
     padding: 18px;
     /* background: transparent; */
@@ -372,7 +373,8 @@ span {
     margin: 12px 0;
 }
 
-.field .item::placeholder {
+.field .item::placeholder,
+.field .item-phone::placeholder {
     color: var(--main-color);
 }
 

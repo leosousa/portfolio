@@ -92,15 +92,15 @@ function sendEmail() {
       message => {
         if (message == "OK") {
             swal({
-                title:"Success!", 
-                text:"Thanks! Your message has sent successfully!", 
+                title:"Sucessos!", 
+                text:"Obrigado! Sua mensagem foi enviada com sucesso!", 
                 icon: "success"
             });
         }
         else {
             swal({
-                title:"Oops", 
-                text:"Your message hasn't sent. Please try again." , 
+                title:"Ops", 
+                text:"Sua mensagem não foi enviada. Por favor, tente novamente!" , 
                 icon:"error" 
             });
         }
@@ -167,7 +167,6 @@ form.addEventListener("submit", (e) => {
 
     if (!fullname.classList.contains("error") &&
         !email.classList.contains("error") &&
-        !phone.classList.contains("error") &&
         !subject.classList.contains("error") &&
         !message.classList.contains("error")) {
             sendEmail();
