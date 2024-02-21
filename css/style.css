@@ -41,6 +41,14 @@ body {
     transition: 1s ease;
 }
 
+#language-config {
+    font-size: 1.7rem;
+    cursor: pointer;
+    transition: 1s ease;
+    /* font-size: 4rem; */
+    border-radius: 50%;
+}
+
 section {
     min-height: 100vh;
     padding: 10rem 9% 2rem;

@@ -1,17 +1,20 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Leonardo Sousa | Portfolio</title>
+  <title data-i18n="title"></title>
 
   <!-- box icons -->
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
 
+  <!-- flag icons -->
+  <link href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.0.0/css/flag-icons.min.css" rel="stylesheet"  />
+
   <!-- custom css -->
-  <link rel="stylesheet" href="css/style.css" />
+  <link  href="css/style.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -22,11 +25,12 @@
     <i class="bx bx-menu" id="menu-icon"></i>
 
     <nav class="navbar">
-      <a href="#home" class="active">Home</a>
-      <a href="#about">Sobre</a>
-      <a href="#services">Serviços</a>
-      <a href="#projects">Projetos</a>
-      <a href="#contact">Contato</a>
+      <a href="#home" class="active" data-i18n="home"></a>
+      <a href="#about" data-i18n="about"></a>
+      <a href="#services" data-i18n="services"></a>
+      <a href="#projects" data-i18n="projects"></a>
+      <a href="#contact" data-i18n="contact"></a>
+      <i class="fi fi-br" id="language-config"></i>
       <i class="bx bxs-moon" id="theme-config"></i>
     </nav>
 
@@ -35,7 +39,7 @@
   <!-- home section design -->
   <section class="home" id="home">
     <div class="home-content">
-      <h3>Olá, Eu sou</h3>
+      <h3 data-i18n="hello"></h3>
       <h1>Leonardo Sousa</h1>
       <h3><span class="multiple-text"></span></h3>
       <p>Bem-vindo(a)! Sou desenvolvedor de soluções desde 2010, com experiência em diversos tipos de projetos. Aqui
