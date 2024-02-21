@@ -41,11 +41,8 @@
     <div class="home-content">
       <h3 data-i18n="hello"></h3>
       <h1>Leonardo Sousa</h1>
-      <h3><span class="multiple-text"></span></h3>
-      <p>Bem-vindo(a)! Sou desenvolvedor de soluções desde 2010, com experiência em diversos tipos de projetos. Aqui
-        você verá estudos e cases para demonstrar como posso contribuir para o sucesso do seu negócio, oferecendo ideias
-        e soluções inovadoras.
-      </p>
+      <h3><span id="multiple-text" class="multiple-text"></span></h3>
+      <p data-i18n="resume"></p>
       <div class="social-media">
         <a href="https://www.instagram.com/_leonardo.sousa/" target="_blank"><i class="bx bxl-instagram-alt"></i></a>
         <a href="https://www.linkedin.com/in/leonardo-sousa/" target="_blank"><i class="bx bxl-linkedin"></i></a>
@@ -66,54 +63,44 @@
     </div>
 
     <div class="about-content">
-      <h2 class="heading">Sobre <span>Mim</span></h2>
+      <h2 class="heading"><span class="black" data-i18n="about"></span> <span  data-i18n="me"></span></h2>
       <!-- <h3>Backend Developer</h3> -->
-      <p>Tudo começou em 2005, quando eu iniciei no Ensino Médio. Eu resolvi fazer um Curso Técnico em Informática para
-        desenvolver uma profissão enquanto fazia o colegial.</p>
-      <p>Após concluir o curso, entrei em uma faculdade de Análise de Sistemas, que abriu portas a um estágio onde eu
-        fui apresentado ao mundo do Asp.Net e do C#, onde, de fato, aprendi a gostar da profissão.</p>
-      <p>Após um ano desse estágio, saí e fui apresentado por indicação de um profesor ao meu primeiro trabalho oficial.
-        Nessa empresa eu fiquei durante 10 anos, onde passei por diversos projetos, inclusive alguns em linguagens como
-        Vb.Net, PHP e Python. Nessa mesma empresa consegui minhas primeiras certificações Microsoft também.</p>
-      <p>Posteriormente, novas oportunidades apareceram e aprendizados também, diversificando minha stack de
-        atuação e aprendendo não só skills técnicas, mas também a parte de visão de negócios, comunicação e mesmo
-        vendas.</p>
-      <p>Busco incessantemente novos desafios para crescer diariamente, ajudar novos desenvolvedores, contribuir para
-        negócios e impulsionar a transformação digital.</p>
+      <p data-i18n="about_paragraph1"></p>
+      <p data-i18n="about_paragraph2"></p>
+      <p data-i18n="about_paragraph3"></p>
+      <p data-i18n="about_paragraph4"></p>
+      <p data-i18n="about_paragraph5"></p>
     </div>
   </section>
 
   <!-- services section design -->
   <section class="services" id="services">
-    <h2 class="heading">Meus <span>serviços</span></h2>
+    <h2 class="heading"><span class="black" data-i18n="My"></span> <span  data-i18n="services"></span></h2>
 
     <div class="services-container">
       <div class="services-box">
         <i class="bx bx-code-alt"></i>
-        <h3>Soluções de backend</h3>
-        <p>Criação e manutenção de APIs, utilizando boas práticas do mercado, trazendo performance e segurança para os
-          seus dados.</p>
+        <h3 data-i18n="backend_solutions">S</h3>
+        <p data-i18n="backend_solutions_description"></p>
       </div>
 
       <div class="services-box">
         <i class="bx bx-git-compare"></i>
-        <h3>Integração de sistemas</h3>
-        <p>Criação de soluções que permitem busca e envio de dados dados entre sistemas, a fim de que atenda a
-          necessidade do seu negócio.</p>
+        <h3 data-i18n="system_integration"></h3>
+        <p data-i18n="system_integration_description"></p>
       </div>
 
       <div class="services-box">
         <i class="bx bx-user-pin"></i>
-        <h3>Consultoria</h3>
-        <p>Análise, diagnóstico, levantamento e aplicação  de soluções visando o desenvolvimento e a melhoria
-          contínua do seu negócio.</p>
+        <h3 data-i18n="consultancy">Consultoria</h3>
+        <p data-i18n="consultancy_description"></p>
       </div>
     </div>
   </section>
 
   <!-- portfolio section design -->
   <section class="projects" id="projects">
-    <h2 class="heading">Latest <span>Projects</span></h2>
+    <h2 class="heading"><span class="black" data-i18n="Latest"></span> <span  data-i18n="projects"></span></h2>
 
     <div class="projects-container">
       <div class="projects-box">
@@ -180,17 +167,17 @@
 
   <!-- contact section design -->
   <section class="contact" id="contact">
-    <h2 class="heading">Contacte-<span>Me</span></h2>
+    <h2 class="heading"><span class="black" data-i18n="Contact"></span><span  data-i18n="me2"></span></h2>
 
     <form action="#">
       <div class="input-box">
         <div class="input-field field">
           <input type="text" placeholder="Nome" id="fullname" class="item">
-          <div class="error-msg">Nome precisa ser preenchido</div>
+          <div class="error-msg" data-i18n="required_name"></div>
         </div>
         <div class="input-field field">
           <input type="email" placeholder="E-mail" id="email" class="item">
-          <div class="error-msg email">Email precisa ser preenchido</div>
+          <div class="error-msg email" data-i18n="required_email"></div>
         </div>
       </div>
       <div class="input-box">
@@ -198,16 +185,16 @@
           <input type="number" placeholder="Telefone (opcional)" id="phone" class="item-phone">
         </div>
         <div class="input-field field">
-          <input type="text" placeholder="Assunto" id="subject" class="item">
-          <div class="error-msg">Assunto precisa ser preenchido</div>
+          <input type="text" placeholder="Assunto" data-i18n="subject" id="subject" class="item">
+          <div class="error-msg" data-i18n="required_subject"></div>
         </div>
       </div>
       <div class="textarea-field field">
         <textarea name="" id="message" cols="30" rows="10" placeholder="Sua mensagem" class="item"></textarea>
-        <div class="error-msg">Mensagem precisa ser preenchida</div>
+        <div class="error-msg"  data-i18n="message_required"></div>
       </div>
 
-      <input type="submit" value="Enviar" class="btn">
+      <input type="submit" id="send" value="Enviar" class="btn">
     </form>
   </section>
 

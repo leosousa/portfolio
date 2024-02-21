@@ -61,16 +61,6 @@ ScrollReveal().reveal('.home-img, .services-container, .projects-box, .contact f
 ScrollReveal().reveal('.home-content h1, .about-img', { origin: 'left' });
 ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' });
 
-
-/*==================== typed js ====================*/
-const typed = new Typed('.multiple-text', {
-    strings: ['Desenvolvedor .Net/C#', 'Consultoria em TI'],
-    typeSpeed: 200,
-    backDelay: 100,
-    loop: true
-});
-
-
 /*==================== smtp js ====================*/
 let form = document.querySelector('form');
 const fullname = document.getElementById('fullname');
@@ -82,6 +72,8 @@ const message = document.getElementById('message');
 function sendEmail() {
     const bodyMessage =`Full Name: ${fullname.value}<br>Email: ${email.value}<br>Phone: ${phone.value}<br>Message: ${message.value}`;
 
+    const langData = fetchLanguageData(lang);
+
     Email.send({
         SecureToken : '',
         To : '',
@@ -92,15 +84,15 @@ function sendEmail() {
       message => {
         if (message == "OK") {
             swal({
-                title:"Sucessos!", 
-                text:"Obrigado! Sua mensagem foi enviada com sucesso!", 
+                title: langData["success"], 
+                text: langData["send_email_success_message"], 
                 icon: "success"
             });
         }
         else {
             swal({
-                title:"Ops", 
-                text:"Sua mensagem não foi enviada. Por favor, tente novamente!" , 
+                title: langData["failure"], 
+                text: langData["send_email_failure_message"], 
                 icon:"error" 
             });
         }
@@ -144,15 +136,17 @@ function checkEmail() {
 
     const errorTxtEmail = document.querySelector(".error-msg.email");
 
+    const langData = fetchLanguageData(lang);
+
     if (!email.value.match(emailRegex)) {
         email.classList.add("error");
         email.parentElement.classList.add("error");
 
         if (email.value != "") {
-            errorTxtEmail.innerText = "Enter a valid email";
+            errorTxtEmail.innerText = langData["required_valid_email"];
         }
         else {
-            errorTxtEmail.innerText = "Email address can't blank";
+            errorTxtEmail.innerText = langData["required_email"];
         }
     }
     else {
@@ -197,6 +191,16 @@ async function fetchLanguageData(lang) {
       const key = element.getAttribute('data-i18n');
       element.textContent = langData[key];
     });
+
+    document.getElementById('fullname').placeholder = langData['fullname'];
+    document.getElementById('email').placeholder = langData['email'];
+    document.getElementById('phone').placeholder = langData['phone_optional'];
+    document.getElementById('subject').placeholder = langData['subject'];
+    document.getElementById('message').placeholder = langData['your_message'];
+    document.getElementById('send').value = langData['send'];
+
+    typed.strings = langData['jobs'];
+    typed.reset();
   }
   
   // Function to change language
@@ -213,14 +217,21 @@ let languageConfig = document.querySelector('#language-config');
 languageConfig.onclick = () => {
     if (languageConfig.classList.toggle('fi-us')) {
         changeLanguage('pt-br');
-        console.log('change pt-br');
     }
     else {
         changeLanguage('en-us');
-        console.log('change en-us');
     }
 }
+
+/*==================== typed js ====================*/
+let typed = new Typed('.multiple-text', {
+    strings:   ["Desenvolvedor .Net/C#", "Consultoria em TI"],
+    typeSpeed: 200,
+    backDelay: 100,
+    loop: true
+});
   
+/*==================== DOM load js ====================*/
   // Call updateContent() on page load
   window.addEventListener('DOMContentLoaded', async () => {
     console.log('DOMContentLoaded: ');
